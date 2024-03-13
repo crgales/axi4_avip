@@ -5,3 +5,6 @@ cov
 *.log
 transcript
 *.vstf*
+design.bin
+.visualizer
+visualizer.log
