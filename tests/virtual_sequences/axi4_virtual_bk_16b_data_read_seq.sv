@@ -50,7 +50,7 @@ task axi4_virtual_bk_16b_data_read_seq::body();
   fork 
     begin : T2_SL_RD
       forever begin
-        axi4_slave_bk_read_16b_transfer_seq_h.start(p_sequencer.axi4_slave_read_seqr_h);
+        axi4_slave_bk_read_16b_transfer_seq_h.start(axi4_slave_read_seqr_h);
       end
     end
   join_none
@@ -59,7 +59,7 @@ task axi4_virtual_bk_16b_data_read_seq::body();
   fork 
     begin: T2_READ
       repeat(3) begin
-      axi4_master_bk_read_16b_transfer_seq_h.start(p_sequencer.axi4_master_read_seqr_h);
+      axi4_master_bk_read_16b_transfer_seq_h.start(axi4_master_read_seqr_h);
       end
     end
   join

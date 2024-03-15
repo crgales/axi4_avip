@@ -50,12 +50,12 @@ task axi4_virtual_nbk_write_read_response_out_of_order_seq::body();
   fork 
     begin : T1_SL_WR
       forever begin
-        axi4_slave_write_nbk_write_read_response_out_of_order_seq_h.start(p_sequencer.axi4_slave_write_seqr_h);
+        axi4_slave_write_nbk_write_read_response_out_of_order_seq_h.start(axi4_slave_write_seqr_h);
       end
     end
     begin : T2_SL_RD
       forever begin
-        axi4_slave_read_nbk_write_read_response_out_of_order_seq_h.start(p_sequencer.axi4_slave_read_seqr_h);
+        axi4_slave_read_nbk_write_read_response_out_of_order_seq_h.start(axi4_slave_read_seqr_h);
       end
     end
   join_none
@@ -64,12 +64,12 @@ task axi4_virtual_nbk_write_read_response_out_of_order_seq::body();
   fork 
     begin: T1_WRITE_READ
       repeat(5) begin
-        axi4_master_write_nbk_write_read_response_out_of_order_seq_h.start(p_sequencer.axi4_master_write_seqr_h);
+        axi4_master_write_nbk_write_read_response_out_of_order_seq_h.start(axi4_master_write_seqr_h);
       end
     end
     begin: T2_READ
       repeat(3) begin
-        axi4_master_read_nbk_write_read_response_out_of_order_seq_h.start(p_sequencer.axi4_master_read_seqr_h);
+        axi4_master_read_nbk_write_read_response_out_of_order_seq_h.start(axi4_master_read_seqr_h);
       end
     end
   join

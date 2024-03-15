@@ -48,7 +48,7 @@ task axi4_virtual_bk_exokay_response_write_seq::body();
   fork 
     begin : T1_SL_WR
       forever begin
-        axi4_slave_bk_write_exokay_resp_seq_h.start(p_sequencer.axi4_slave_write_seqr_h);
+        axi4_slave_bk_write_exokay_resp_seq_h.start(axi4_slave_write_seqr_h);
       end
     end
   join_none
@@ -57,7 +57,7 @@ task axi4_virtual_bk_exokay_response_write_seq::body();
   fork 
     begin: T1_WRITE
       repeat(2) begin
-        axi4_master_bk_write_exokay_resp_seq_h.start(p_sequencer.axi4_master_write_seqr_h);
+        axi4_master_bk_write_exokay_resp_seq_h.start(axi4_master_write_seqr_h);
       end
     end
   join

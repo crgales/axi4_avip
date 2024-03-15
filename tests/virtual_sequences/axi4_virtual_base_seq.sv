@@ -1,6 +1,3 @@
-`ifndef AXI4_VIRTUAL_BASE_SEQ_INCLUDED_
-`define AXI4_VIRTUAL_BASE_SEQ_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 //Class: axi4_virtual_base_seq
 // Description:
@@ -9,10 +6,23 @@
 class axi4_virtual_base_seq extends uvm_sequence;
   `uvm_object_utils(axi4_virtual_base_seq)
 
-   //p sequencer macro declaration 
-   `uvm_declare_p_sequencer(axi4_virtual_sequencer)
- 
-   axi4_env_config env_cfg_h;
+  // Variable: master_write_seqr_h
+  // Declaring master write sequencer handle
+  axi4_master_write_sequencer axi4_master_write_seqr_h;
+
+  // Variable: master_read_seqr_h
+  // Declaring master read sequencer handle
+  axi4_master_read_sequencer axi4_master_read_seqr_h;
+
+  // Variable: slave_write_seqr_h
+  // Declaring slave write sequencer handle
+  axi4_slave_write_sequencer axi4_slave_write_seqr_h;
+
+  // Variable: slave_read_seqr_h
+  // Declaring slave read sequencer handle
+  axi4_slave_read_sequencer axi4_slave_read_seqr_h;
+
+  axi4_env_config env_cfg_h;
 
   //--------------------------------------------------------------------------------------------
   // Externally defined tasks and functions
@@ -41,14 +51,7 @@ endfunction:new
 // phase - stores the current phase
 //--------------------------------------------------------------------------------------------
 task axi4_virtual_base_seq::body();
-
-   if(!uvm_config_db#(axi4_env_config) ::get(null,get_full_name(),"axi4_env_config",env_cfg_h)) begin
-    `uvm_fatal("CONFIG","cannot get() env_cfg from uvm_config_db.Have you set() it?")
-  end
-
-  if(!$cast(p_sequencer,m_sequencer))begin
-    `uvm_error(get_full_name(),"Virtual sequencer pointer cast failed")
+   if(env_cfg_h == null) begin
+    `uvm_fatal("CONFIG","Configuration not provided to virtual sequence")
   end
 endtask:body
-
-`endif

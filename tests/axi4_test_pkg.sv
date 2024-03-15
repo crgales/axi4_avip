@@ -1,6 +1,3 @@
-`ifndef AXI4_TEST_PKG_INCLUDED_
-`define AXI4_TEST_PKG_INCLUDED_
-
 //-----------------------------------------------------------------------------------------
 // Package: Test
 // Description:
@@ -35,7 +32,7 @@ package axi4_test_pkg;
   `include "axi4_blocking_okay_response_write_test.sv"
   `include "axi4_blocking_incr_burst_write_test.sv"
   `include "axi4_blocking_wrap_burst_write_test.sv"
-  
+
   `include "axi4_non_blocking_8b_write_data_test.sv"
   `include "axi4_non_blocking_16b_write_data_test.sv"
   `include "axi4_non_blocking_32b_write_data_test.sv"
@@ -52,7 +49,6 @@ package axi4_test_pkg;
   `include "axi4_blocking_16b_data_read_test.sv"
   `include "axi4_blocking_32b_data_read_test.sv"
   `include "axi4_blocking_64b_data_read_test.sv"
-  `include "axi4_blocking_64b_data_read_test.sv"
   `include "axi4_blocking_okay_response_read_test.sv"
   `include "axi4_blocking_exokay_response_read_test.sv"
   `include "axi4_non_blocking_incr_burst_read_test.sv"
@@ -63,7 +59,7 @@ package axi4_test_pkg;
   `include "axi4_non_blocking_64b_data_read_test.sv"
   `include "axi4_non_blocking_okay_response_read_test.sv"
   `include "axi4_non_blocking_exokay_response_read_test.sv"
-  
+
   `include "axi4_blocking_8b_write_read_test.sv"
   `include "axi4_blocking_16b_write_read_test.sv"
   `include "axi4_blocking_32b_write_read_test.sv"
@@ -74,7 +70,7 @@ package axi4_test_pkg;
   `include "axi4_blocking_fixed_burst_write_read_test.sv"
   `include "axi4_blocking_outstanding_transfer_write_read_test.sv"
   `include "axi4_blocking_cross_write_read_test.sv"
-  
+
   `include "axi4_non_blocking_8b_write_read_test.sv"
   `include "axi4_non_blocking_16b_write_read_test.sv"
   `include "axi4_non_blocking_32b_write_read_test.sv"
@@ -96,7 +92,7 @@ package axi4_test_pkg;
   `include "axi4_non_blocking_slave_mem_mode_wrap_burst_write_read_test.sv"
   `include "axi4_non_blocking_slave_mem_mode_fixed_burst_write_read_test.sv"
   `include "axi4_non_blocking_slave_mem_mode_incr_burst_write_read_test.sv"
-  
+
 
   `include "axi4_non_blocking_write_read_response_out_of_order_test.sv"
   `include "axi4_non_blocking_only_read_response_out_of_order_test.sv"
@@ -104,5 +100,3 @@ package axi4_test_pkg;
 
   `include "axi4_non_blocking_qos_write_read_test.sv"
 endpackage : axi4_test_pkg
-
-`endif

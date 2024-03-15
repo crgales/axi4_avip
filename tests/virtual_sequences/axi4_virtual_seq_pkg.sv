@@ -1,6 +1,3 @@
-`ifndef AXI4_VIRTUAL_SEQ_PKG_INCLUDED_
-`define AXI4_VIRTUAL_SEQ_PKG_INCLUDED_
-
 //-----------------------------------------------------------------------------------------
 // Package: axi4_virtual_seq_pkg
 // Description:
@@ -14,10 +11,10 @@ package axi4_virtual_seq_pkg;
   `include "uvm_macros.svh"
   import uvm_pkg::*;
   import axi4_master_pkg::*;
-  import axi4_slave_pkg::*; 
-  import axi4_master_seq_pkg::*; 
-  import axi4_slave_seq_pkg::*; 
-  import axi4_env_pkg::*; 
+  import axi4_slave_pkg::*;
+  import axi4_master_seq_pkg::*;
+  import axi4_slave_seq_pkg::*;
+  import axi4_env_pkg::*;
 
   //-------------------------------------------------------
   // Importing the required packages
@@ -60,7 +57,7 @@ package axi4_virtual_seq_pkg;
   `include "axi4_virtual_nbk_64b_data_read_seq.sv"
   `include "axi4_virtual_nbk_okay_response_read_seq.sv"
   `include "axi4_virtual_nbk_exokay_response_read_seq.sv"
-  
+
   `include "axi4_virtual_bk_8b_write_read_seq.sv"
   `include "axi4_virtual_bk_16b_write_read_seq.sv"
   `include "axi4_virtual_bk_32b_write_read_seq.sv"
@@ -72,7 +69,7 @@ package axi4_virtual_seq_pkg;
   `include "axi4_virtual_bk_fixed_burst_write_read_seq.sv"
   `include "axi4_virtual_bk_outstanding_transfer_write_read_seq.sv"
   `include "axi4_virtual_bk_cross_write_read_seq.sv"
-  
+
   `include "axi4_virtual_nbk_8b_write_read_seq.sv"
   `include "axi4_virtual_nbk_16b_write_read_seq.sv"
   `include "axi4_virtual_nbk_32b_write_read_seq.sv"
@@ -86,7 +83,7 @@ package axi4_virtual_seq_pkg;
   `include "axi4_virtual_nbk_unaligned_addr_write_read_seq.sv"
   `include "axi4_virtual_nbk_cross_write_read_seq.sv"
   `include "axi4_virtual_nbk_slave_error_write_read_seq.sv"
-  
+
   `include "axi4_virtual_nbk_okay_response_write_read_seq.sv"
 
   `include "axi4_virtual_nbk_write_read_rand_seq.sv"
@@ -104,6 +101,3 @@ package axi4_virtual_seq_pkg;
   `include "axi4_virtual_nbk_qos_write_read_seq.sv"
 
 endpackage : axi4_virtual_seq_pkg
-
-`endif
-

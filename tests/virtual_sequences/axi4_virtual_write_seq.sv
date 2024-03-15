@@ -1,6 +1,3 @@
-`ifndef AXI4_VIRTUAL_WRITE_SEQ_INCLUDED_
-`define AXI4_VIRTUAL_WRITE_SEQ_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4_virtual_write_seq
 // Creates and starts the master and slave sequences
@@ -47,18 +44,16 @@ task axi4_virtual_write_seq::body();
   axi4_slave_bk_write_seq_h = axi4_slave_bk_write_seq::type_id::create("axi4_slave_bk_write_seq_h");
   axi4_slave_nbk_write_seq_h = axi4_slave_nbk_write_seq::type_id::create("axi4_slave_nbk_write_seq_h");
 
-  `uvm_info(get_type_name(), $sformatf("DEBUG_MSHA :: Insdie axi4_virtual_write_seq"), UVM_NONE); 
-  fork 
+  `uvm_info(get_type_name(), $sformatf("DEBUG_MSHA :: Insdie axi4_virtual_write_seq"), UVM_NONE);
+  fork
     begin: T1_WRITE
       repeat(5) begin
-        axi4_master_bk_write_seq_h.start(p_sequencer.axi4_master_write_seqr_h);
-        axi4_master_nbk_write_seq_h.start(p_sequencer.axi4_master_write_seqr_h);
-        axi4_slave_bk_write_seq_h.start(p_sequencer.axi4_slave_write_seqr_h);
-        axi4_slave_nbk_write_seq_h.start(p_sequencer.axi4_slave_write_seqr_h);
+        axi4_master_bk_write_seq_h.start(axi4_master_write_seqr_h);
+        axi4_master_nbk_write_seq_h.start(axi4_master_write_seqr_h);
+        axi4_slave_bk_write_seq_h.start(axi4_slave_write_seqr_h);
+        axi4_slave_nbk_write_seq_h.start(axi4_slave_write_seqr_h);
       end
     end
   join
  endtask : body
-
-`endif
 

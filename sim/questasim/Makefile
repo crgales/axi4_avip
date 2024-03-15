@@ -49,9 +49,25 @@ usage:
 
 # For Assertions use +acc options
 #  +cover=becstf
-compile: clean
-	vlib work
-	vlog +cover	+fcover +define$(DEFINES) -l axi4_compile.log -f ../axi4_compile.f
+hdl_comp:
+	vlog ../../src/axi4_if.sv
+	vlog ../../src/axi4_master_agent/hdl/*.sv
+	vlog ../../src/axi4_slave_agent/hdl/*.sv
+	vlog ../../tb/hdl_top.sv
+
+hvl_comp:
+	vlog ../../src/axi4_globals_pkg.sv
+	vlog ../../src/axi4_master_agent/hvl/axi4_master_pkg.sv
+	vlog ../../src/axi4_slave_agent/hvl/axi4_slave_pkg.sv
+	vlog ../../env/axi4_env_pkg.sv
+	vlog ../../tests/sequences/slave_sequences/axi4_slave_seq_pkg.sv
+	vlog ../../tests/sequences/master_sequences/axi4_master_seq_pkg.sv
+	vlog ../../tests/virtual_sequences/axi4_virtual_seq_pkg.sv
+	vlog ../../tests/axi4_test_pkg.sv
+	vlog ../../tb/hvl_top.sv
+
+compile: clean hvl_comp hdl_comp
+#	vlog +cover	+fcover +define$(DEFINES) -l axi4_compile.log -f ../axi4_compile.f
 	vopt -o top_opt hdl_top hvl_top -debug +designfile
 
 simulate:
