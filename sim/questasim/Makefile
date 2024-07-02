@@ -1,5 +1,5 @@
 # Setting a default TEST as base_test
-TEST ?= = axi4_base_test
+TEST ?= axi4_base_test
 
 # Setting the default uvm_verbosity to UVM_MEDIUM
 VERBOSITY ?= UVM_MEDIUM
@@ -72,6 +72,7 @@ compile: clean hvl_comp hdl_comp
 
 simulate:
 	mkdir $(TEST_FOLDER)
+	ln -s ../design.bin $(TEST_FOLDER)/design.bin
 	vsim -c -assertdebug top_opt +UVM_TESTNAME=$(TEST) +UVM_VERBOSITY=$(VERBOSITY) -l $(TEST_FOLDER)/$(TEST).log \
 	  -sva -coverage -qwavedb=+signal+class+wavedir=$(TEST_FOLDER) \
 	  -do "coverage save -onexit -assert -directive -cvg -codeAll $(TEST_FOLDER)/$(TEST)_coverage.ucdb; run -all; exit"
@@ -100,7 +101,7 @@ clean_simulate:
 	rm -rf *_test*
 
 clean_compile:
-	rm -rf work/ *_compile.log .visualizer visualizer.log design.bin
+	rm -rf work/ *_compile.log .visualizer visualizer.log design.bin qwave.db
 	rm -rf merged_coverage.ucdb merged_cov_html_report
 
 ##
