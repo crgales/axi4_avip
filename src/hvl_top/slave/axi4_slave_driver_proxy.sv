@@ -1,6 +1,3 @@
-`ifndef AXI4_SLAVE_DRIVER_PROXY_INCLUDED_
-`define AXI4_SLAVE_DRIVER_PROXY_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4_slave_driver_proxy
 // This is the proxy driver on the HVL side
@@ -136,7 +133,7 @@ function void axi4_slave_driver_proxy::end_of_elaboration_phase(uvm_phase phase)
   if(axi4_slave_agent_cfg_h.read_data_mode == SLAVE_MEM_MODE) begin
     axi4_slave_mem_h = axi4_slave_memory::type_id::create("axi4_slave_mem_h");
   end
-  axi4_slave_drv_bfm_h.axi4_slave_drv_proxy_h= this;
+  // axi4_slave_drv_bfm_h.axi4_slave_drv_proxy_h= this;
 endfunction  : end_of_elaboration_phase
 
 
@@ -814,4 +811,3 @@ task axi4_slave_driver_proxy::out_of_order_for_reads(output axi4_read_transfer_c
  end
 endtask : out_of_order_for_reads
 
-`endif

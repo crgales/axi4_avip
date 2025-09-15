@@ -1,6 +1,3 @@
-`ifndef AXI4_MASTER_MONITOR_BFM_INCLUDED_
-`define AXI4_MASTER_MONITOR_BFM_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 //Interface : axi4_master_monitor_bfm
 //Used as the HDL monitor for axi4
@@ -69,12 +66,12 @@ interface axi4_master_monitor_bfm(input bit aclk, input bit aresetn,
   //-------------------------------------------------------
   // Importing axi4 Global Package master package
   //-------------------------------------------------------
-  import axi4_master_pkg::axi4_master_monitor_proxy;
+  // import axi4_master_pkg::axi4_master_monitor_proxy;
  
   //Variable : axi4_master_monitor_proxy_h
   //Creating the handle for proxy monitor
  
-  axi4_master_monitor_proxy axi4_master_mon_proxy_h;
+  // axi4_master_monitor_proxy axi4_master_mon_proxy_h;
   
   //-------------------------------------------------------
   // Task: wait_for_aresetn
@@ -209,5 +206,3 @@ interface axi4_master_monitor_bfm(input bit aclk, input bit aresetn,
     end
   endtask
 endinterface : axi4_master_monitor_bfm
-
-`endif

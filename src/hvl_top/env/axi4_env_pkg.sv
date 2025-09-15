@@ -1,6 +1,3 @@
-`ifndef AXI4_ENV_PKG_INCLUDED_
-`define AXI4_ENV_PKG_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Package: axi4_env_pkg
 // Includes all the files related to axi4 env
@@ -24,4 +21,3 @@ package axi4_env_pkg;
 
 endpackage : axi4_env_pkg
 
-`endif

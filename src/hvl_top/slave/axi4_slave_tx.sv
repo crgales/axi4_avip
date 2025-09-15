@@ -1,6 +1,3 @@
-`ifndef AXI4_SLAVE_TX_INCLUDED_
-`define AXI4_SLAVE_TX_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4_slave_tx
 //  This class holds the data items required to drive stimulus to dut
@@ -397,5 +394,4 @@ function void axi4_slave_tx::do_print(uvm_printer printer);
   end
 endfunction : do_print
 
-`endif
 

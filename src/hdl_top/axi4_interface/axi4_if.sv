@@ -1,6 +1,3 @@
-`ifndef AXI4_IF_INCLUDED_
-`define AXI4_IF_INCLUDED_
-
 // Import axi4_globals_pkg 
 import axi4_globals_pkg::*;
 
@@ -62,5 +59,3 @@ interface axi4_if(input aclk, input aresetn);
   
 
 endinterface: axi4_if 
-
-`endif

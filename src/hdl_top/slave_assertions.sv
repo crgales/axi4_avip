@@ -1,6 +1,3 @@
-`ifndef SLAVE_ASSERTIONS_INCLUDED_
-`define SLAVE_ASSERTIONS_INCLUDED_
-
 //-------------------------------------------------------
 // Importing Global Package
 //-------------------------------------------------------
@@ -220,6 +217,3 @@ interface slave_assertions (input                     aclk,
   AXI_RD_VALID_STABLE_CHECK : assert property (axi_read_data_channel_valid_stable_check);
 
 endinterface : slave_assertions
-
-`endif
-

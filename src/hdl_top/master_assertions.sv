@@ -1,6 +1,3 @@
-`ifndef MASTER_ASSERTIONS_INCLUDED_
-`define MASTER_ASSERTIONS_INCLUDED_
-
 //-------------------------------------------------------
 // Importing Global Package
 //-------------------------------------------------------
@@ -221,6 +218,4 @@ interface master_assertions (input                     aclk,
   AXI_RD_VALID_STABLE_CHECK : assert property (axi_read_data_channel_valid_stable_check);
 
 endinterface : master_assertions
-
-`endif
 

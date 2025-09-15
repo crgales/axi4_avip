@@ -1,6 +1,3 @@
-`ifndef AXI4_MASTER_TX_INCLUDED_
-`define AXI4_MASTER_TX_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4_master_tx
 // This class holds the data items required to drive the stimulus to dut
@@ -659,6 +656,4 @@ function void axi4_master_tx::do_print(uvm_printer printer);
   end
   printer.print_string("transfer_type",transfer_type.name());
 endfunction : do_print
-
-`endif
 

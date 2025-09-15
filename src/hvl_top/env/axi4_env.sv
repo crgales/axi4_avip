@@ -1,6 +1,3 @@
-`ifndef AXI4_ENV_INCLUDED_
-`define AXI4_ENV_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4 env
 // Description:
@@ -156,6 +153,4 @@ function void axi4_env::connect_phase(uvm_phase phase);
   end 
   axi4_scoreboard_h.axi4_env_cfg_h = axi4_env_cfg_h;
 endfunction : connect_phase
-
-`endif
 

@@ -1,6 +1,3 @@
-`ifndef AXI4_MASTER_PKG_INCLUDED_
-`define AXI4_MASTER_PKG_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Package: axi4_master_pkg
 //  Includes all the files related to axi4 master
@@ -23,8 +20,7 @@ package axi4_master_pkg;
   `include "axi4_master_tx.sv"
   `include "axi4_master_seq_item_converter.sv"
   `include "axi4_master_cfg_converter.sv"
-  `include "axi4_master_write_sequencer.sv"
-  `include "axi4_master_read_sequencer.sv"
+  typedef uvm_sequencer#(axi4_master_tx) axi4_master_sequencer_t;
   `include "axi4_master_driver_proxy.sv"
   `include "axi4_master_monitor_proxy.sv"
   `include "axi4_master_coverage.sv"
@@ -32,4 +28,3 @@ package axi4_master_pkg;
   
 endpackage : axi4_master_pkg
 
-`endif

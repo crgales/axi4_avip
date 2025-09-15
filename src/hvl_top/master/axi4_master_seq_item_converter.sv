@@ -1,6 +1,3 @@
-`ifndef AXI4_MASTER_SEQ_ITEM_CONVERTER_INCLUDED_
-`define AXI4_MASTER_SEQ_ITEM_CONVERTER_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // class : axi4 master_seq_item_converter
 // Description:
@@ -487,4 +484,3 @@ function void axi4_master_seq_item_converter::do_print(uvm_printer printer);
  end
 endfunction : do_print
 
-`endif

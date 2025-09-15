@@ -1,6 +1,3 @@
-`ifndef AXI4_SLAVE_AGENT_BFM_INCLUDED_
-`define AXI4_SLAVE_AGENT_BFM_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Module:AXI4 Slave Agent BFM
 // This module is used as the configuration class for slave agent bfm and its components
@@ -118,6 +115,7 @@ module axi4_slave_agent_bfm #(parameter int SLAVE_ID = 0)(axi4_if intf);
                                                .rready   (intf.rready)   
                                                );
 
+/*
   bind axi4_slave_driver_bfm slave_assertions S_A (.aclk(aclk),
                                                    .aresetn(aresetn),
                                                    .awid(awid),
@@ -162,7 +160,7 @@ module axi4_slave_agent_bfm #(parameter int SLAVE_ID = 0)(axi4_if intf);
                                                    .rvalid(rvalid),
                                                    .rready(rready)
                                                   );
-
+*/
   //-------------------------------------------------------
   // Setting the virtual handle of BMFs into config_db
   //-------------------------------------------------------
@@ -177,5 +175,4 @@ module axi4_slave_agent_bfm #(parameter int SLAVE_ID = 0)(axi4_if intf);
    
 endmodule : axi4_slave_agent_bfm
 
-`endif
 

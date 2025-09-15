@@ -1,6 +1,3 @@
-`ifndef AXI4_MASTER_DRIVER_BFM_INCLUDED_
-`define AXI4_MASTER_DRIVER_BFM_INCLUDED_
-
 //-------------------------------------------------------
 // Importing global package
 //-------------------------------------------------------
@@ -73,7 +70,7 @@ interface axi4_master_driver_bfm(input bit                      aclk,
   //-------------------------------------------------------
   // Importing Global Package
   //-------------------------------------------------------
-  import axi4_master_pkg::axi4_master_driver_proxy;
+  // import axi4_master_pkg::axi4_master_driver_proxy;
 
   //Variable: name
   //Used to store the name of the interface
@@ -81,7 +78,7 @@ interface axi4_master_driver_bfm(input bit                      aclk,
 
   //Variable: axi4_master_driver_proxy_h
   //Creating the handle for master driver proxy
-  axi4_master_driver_proxy axi4_master_drv_proxy_h;
+  // axi4_master_driver_proxy axi4_master_drv_proxy_h;
 
   initial begin
     `uvm_info(name,$sformatf(name),UVM_LOW)
@@ -332,5 +329,4 @@ task axi4_write_address_channel_task (inout axi4_write_transfer_char_s data_writ
 
 endinterface : axi4_master_driver_bfm
 
-`endif
 

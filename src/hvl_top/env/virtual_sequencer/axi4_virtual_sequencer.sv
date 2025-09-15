@@ -1,6 +1,3 @@
-`ifndef AXI4_VIRTUAL_SEQUENCER_INCLUDED_
-`define AXI4_VIRTUAL_SEQUENCER_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // class: axi4_virtual_sequencer
 // This class contains the handle of actual sequencer pointing towards them
@@ -10,19 +7,19 @@ class axi4_virtual_sequencer extends uvm_sequencer#(uvm_sequence_item);
 
   // Variable: master_write_seqr_h
   // Declaring master write sequencer handle
-  axi4_master_write_sequencer axi4_master_write_seqr_h;
+  axi4_master_sequencer_t axi4_master_write_seqr_h;
 
   // Variable: master_read_seqr_h
   // Declaring master read sequencer handle
-  axi4_master_read_sequencer axi4_master_read_seqr_h;
+  axi4_master_sequencer_t axi4_master_read_seqr_h;
   
   // Variable: slave_write_seqr_h
   // Declaring slave write sequencer handle
-  axi4_slave_write_sequencer axi4_slave_write_seqr_h;
+  axi4_slave_sequencer_t axi4_slave_write_seqr_h;
 
   // Variable: slave_read_seqr_h
   // Declaring slave read sequencer handle
-  axi4_slave_read_sequencer axi4_slave_read_seqr_h;
+  axi4_slave_sequencer_t axi4_slave_read_seqr_h;
 
   //-------------------------------------------------------
   // Externally defined Tasks and Functions
@@ -105,6 +102,4 @@ task axi4_virtual_sequencer::run_phase(uvm_phase phase);
   // ...
 
 endtask : run_phase
-
-`endif
 

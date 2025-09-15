@@ -1,6 +1,3 @@
-`ifndef AXI4_WRITE_TEST_INCLUDED_
-`define AXI4_WRITE_TEST_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4_write_test
 // Extends the base test and starts the virtual sequenceof write
@@ -60,6 +57,4 @@ task axi4_write_test::run_phase(uvm_phase phase);
   phase.drop_objection(this);
 
 endtask : run_phase
-
-`endif
 

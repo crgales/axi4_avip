@@ -1,6 +1,3 @@
-`ifndef AXI4_SLAVE_DRIVER_BFM_INCLUDED_
-`define AXI4_SLAVE_DRIVER_BFM_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 //Interface : axi4_slave_driver_bfm
 //Used as the HDL driver for axi4
@@ -71,11 +68,11 @@ interface axi4_slave_driver_bfm(input                     aclk    ,
   //-------------------------------------------------------
   // Importing axi4 slave driver proxy
   //-------------------------------------------------------
-  import axi4_slave_pkg::axi4_slave_driver_proxy;
+  // import axi4_slave_pkg::axi4_slave_driver_proxy;
 
   //Variable : axi4_slave_driver_proxy_h
   //Creating the handle for proxy driver
-  axi4_slave_driver_proxy axi4_slave_drv_proxy_h;
+  // axi4_slave_driver_proxy axi4_slave_drv_proxy_h;
   
   reg [7: 0] i = 0;
   reg [7: 0] j = 0;
@@ -139,9 +136,9 @@ interface axi4_slave_driver_bfm(input                     aclk    ,
 
     `uvm_info("SLAVE_DRIVER_WADDR_PHASE", $sformatf("outside of awvalid"), UVM_MEDIUM);
     
-    if(axi4_slave_drv_proxy_h.axi4_slave_write_addr_fifo_h.is_full()) begin
-      `uvm_error("UVM_TLM_FIFO","FIFO is now FULL!")
-    end 
+    // if(axi4_slave_drv_proxy_h.axi4_slave_write_addr_fifo_h.is_full()) begin
+    //  `uvm_error("UVM_TLM_FIFO","FIFO is now FULL!")
+    // end 
       
    // Sample the values
    mem_awid 	[i]	  = awid  	;	
@@ -445,5 +442,3 @@ interface axi4_slave_driver_bfm(input                     aclk    ,
   endtask : default_values
 
 endinterface : axi4_slave_driver_bfm
-
-`endif

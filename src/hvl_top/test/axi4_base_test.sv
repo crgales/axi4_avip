@@ -1,6 +1,3 @@
-`ifndef AXI4_BASE_TEST_INCLUDED_
-`define AXI4_BASE_TEST_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4_base_test
 // axi4_base test has the test scenarios for testbench which has the env, config, etc.
@@ -198,13 +195,8 @@ task axi4_base_test::run_phase(uvm_phase phase);
 
   phase.raise_objection(this, "axi4_base_test");
 
-  `uvm_info(get_type_name(), $sformatf("Inside BASE_TEST"), UVM_NONE);
-  super.run_phase(phase);
-  #100;
-  `uvm_info(get_type_name(), $sformatf("Done BASE_TEST"), UVM_NONE);
+  `uvm_fatal(get_type_name(), "Please define your own test by extending axi4_base_test");
+
   phase.drop_objection(this);
 
 endtask : run_phase
-
-`endif
-

@@ -1,6 +1,3 @@
-`ifndef AXI4_SLAVE_MONITOR_BFM_INCLUDED_
-`define AXI4_SLAVE_MONITOR_BFM_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 //Interface : axi4_slave_monitor_bfm
 //Used as the HDL monitor for axi4
@@ -69,13 +66,13 @@ interface axi4_slave_monitor_bfm(input aclk, input aresetn,
   //-------------------------------------------------------
   // Importing axi4 Global Package slave package
   //-------------------------------------------------------
-  import axi4_slave_pkg::axi4_slave_monitor_proxy;
+  // import axi4_slave_pkg::axi4_slave_monitor_proxy;
 
   reg[3:0] i = 0;
 
   //Variable : axi4_slave_monitor_proxy_h
   //Creating the handle for proxy monitor
-  axi4_slave_monitor_proxy axi4_slave_mon_proxy_h;
+  // axi4_slave_monitor_proxy axi4_slave_mon_proxy_h;
   
   //Printing axi4 slave monitor bfm
   initial begin
@@ -236,4 +233,3 @@ interface axi4_slave_monitor_bfm(input aclk, input aresetn,
   endtask
 
 endinterface : axi4_slave_monitor_bfm
-`endif

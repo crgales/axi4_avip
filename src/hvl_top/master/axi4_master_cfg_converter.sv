@@ -1,6 +1,3 @@
-`ifndef AXI4_MASTER_CFG_CONVERTER_INCLUDED_
-`define AXI4_MASTER_CFG_CONVERTER_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4_master_cfg_converter
 // Description:
@@ -52,5 +49,4 @@ function void axi4_master_cfg_converter:: do_print(uvm_printer printer);
   printer.print_field ("outstanding_read_tx",axi4_cfg.outstanding_read_tx,$bits(axi4_cfg.outstanding_read_tx),UVM_DEC);
 endfunction : do_print
 
-`endif
 

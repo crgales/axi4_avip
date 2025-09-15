@@ -1,6 +1,3 @@
-`ifndef AXI4_MASTER_AGENT_CONFIG_INCLUDED_
-`define AXI4_MASTER_AGENT_CONFIG_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4_master_agent_config
 // Used as the configuration class for axi4_master agent, for configuring number of slaves and number
@@ -136,6 +133,4 @@ function void axi4_master_agent_config::do_print(uvm_printer printer);
   printer.print_field("outstanding_read_tx",outstanding_read_tx,$bits(outstanding_read_tx),UVM_DEC);
   
 endfunction : do_print
-
-`endif
 

@@ -1,6 +1,3 @@
-`ifndef ASSERTION_BASE_TEST_INCLUDED_
-`define ASSERTION_BASE_TEST_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: assertion_base_test
 // axi4_base test has the test scenarios for testbench which has the env, config, etc.
@@ -58,5 +55,3 @@ task assertion_base_test::run_phase(uvm_phase phase);
   phase.drop_objection(this);
 
 endtask : run_phase
-
-`endif

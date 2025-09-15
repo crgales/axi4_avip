@@ -1,6 +1,3 @@
-`ifndef AXI4_SLAVE_AGENT_CONFIG_INCLUDED_
-`define AXI4_SLAVE_AGENT_CONFIG_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4_slave_agent_config
 // Used as the configuration class for axi4_slave agent and it's components
@@ -110,6 +107,4 @@ function void axi4_slave_agent_config::do_print(uvm_printer printer);
   printer.print_field ("wait_count_read_data_channel",wait_count_read_data_channel,$bits(wait_count_read_data_channel),UVM_DEC);
          
 endfunction : do_print
-
-`endif
 

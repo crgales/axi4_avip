@@ -1,6 +1,3 @@
-`ifndef AXI4_SCOREBOARD_INCLUDED_
-`define AXI4_SCOREBOARD_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4_scoreboard
 // Scoreboard the data getting from monitor port that goes into the implementation port
@@ -1414,6 +1411,4 @@ function void axi4_scoreboard::report_phase(uvm_phase phase);
     `uvm_info(get_type_name(),$sformatf("scoreboard's read response packets count from slave   \n %0d",axi4_slave_tx_rresp_count),UVM_HIGH)
 
 endfunction : report_phase
-
-`endif
 

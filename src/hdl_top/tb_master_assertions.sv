@@ -1,6 +1,3 @@
-`ifndef TB_MASTER_ASSERTIONS_INCLUDED_
-`define TB_MASTER_ASSERTIONS_INCLUDED_
-
 //-------------------------------------------------------
 // Importing global package
 //-------------------------------------------------------
@@ -1268,6 +1265,3 @@ module tb_master_assertions;
   endtask : if_rd_channel_valid_stable_negative_case
 
 endmodule : tb_master_assertions
-
-`endif
-

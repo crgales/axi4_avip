@@ -1,6 +1,3 @@
-`ifndef AXI4_GLOBALS_PKG_INCLUDED_
-`define AXI4_GLOBALS_PKG_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Package: axi4_globals_pkg
 // Used for storing enums, parameters and defining the structs
@@ -416,6 +413,3 @@ package axi4_globals_pkg;
   } axi4_transfer_cfg_s;
 
 endpackage : axi4_globals_pkg
-
-`endif
-

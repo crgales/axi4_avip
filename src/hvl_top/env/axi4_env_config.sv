@@ -1,6 +1,3 @@
-`ifndef AXI4_ENV_CONFIG_INCLUDED_
-`define AXI4_ENV_CONFIG_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4 env_config
 // This class is used as configuration class for environment and its components
@@ -69,6 +66,4 @@ function void axi4_env_config::do_print(uvm_printer printer);
   printer.print_string ("transfer_type",   write_read_mode_h.name());
 
 endfunction : do_print
-
-`endif
 

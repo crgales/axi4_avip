@@ -1,6 +1,3 @@
-`ifndef AXI4_SLAVE_CFG_CONVERTER_INCLUDED_                                                         
-`define AXI4_SLAVE_CFG_CONVERTER_INCLUDED_                                                         
-                                                                                                  
 //--------------------------------------------------------------------------------------------      
 // Class: axi4_slave_cfg_converter   
 // Description:
@@ -47,5 +44,4 @@ endfunction: from_class
   printer.print_field("min_address",axi4_cfg.min_address,$bits(axi4_cfg.min_address),UVM_HEX);
   printer.print_field("max_address",axi4_cfg.max_address,$bits(axi4_cfg.max_address),UVM_HEX);
  endfunction : do_print                                                                              
-                                                                                                
-`endif
+

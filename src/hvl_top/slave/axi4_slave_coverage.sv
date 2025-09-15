@@ -1,6 +1,3 @@
-`ifndef AXI4_SLAVE_COVERAGE_INCLUDED_
-`define AXI4_SLAVE_COVERAGE_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: slave_coverage
 // slave_coverage determines the how much code is covered for better functionality of the TB.
@@ -230,6 +227,4 @@ endfunction: write
 function void axi4_slave_coverage::report_phase(uvm_phase phase);
   `uvm_info(get_type_name(),$sformatf("AXI4 Slave Agent Coverage = %0.2f %%", axi4_slave_covergroup.get_coverage()), UVM_NONE);
 endfunction: report_phase
-
-`endif
 

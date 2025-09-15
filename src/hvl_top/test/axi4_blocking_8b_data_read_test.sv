@@ -1,6 +1,3 @@
-`ifndef AXI4_BLOCKING_8B_DATA_READ_TEST_INCLUDED_
-`define AXI4_BLOCKING_8B_DATA_READ_TEST_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4_8b_data_read_test
 // Extends the base test and starts the virtual sequenceof write
@@ -55,6 +52,3 @@ task axi4_blocking_8b_data_read_test::run_phase(uvm_phase phase);
   phase.drop_objection(this);
 
 endtask : run_phase
-
-`endif
-

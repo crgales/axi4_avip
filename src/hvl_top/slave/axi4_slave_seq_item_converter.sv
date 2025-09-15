@@ -1,6 +1,3 @@
-`ifndef AXI4_SLAVE_SEQ_ITEM_CONVERTER_INCLUDED_
-`define AXI4_SLAVE_SEQ_ITEM_CONVERTER_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4_slave_seq_item_converter
 // Description:
@@ -536,4 +533,3 @@ function void axi4_slave_seq_item_converter::do_print(uvm_printer printer);
 
 endfunction : do_print
 
-`endif

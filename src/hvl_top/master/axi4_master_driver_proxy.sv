@@ -1,6 +1,3 @@
-`ifndef AXI4_MASTER_DRIVER_PROXY_INCLUDED_
-`define AXI4_MASTER_DRIVER_PROXY_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: master_driver_proxy
 //  Driver is written by extending uvm_driver,uvm_driver is inherited from uvm_component, 
@@ -146,7 +143,7 @@ endfunction : build_phase
 //--------------------------------------------------------------------------------------------
 function void axi4_master_driver_proxy::end_of_elaboration_phase(uvm_phase phase);
   super.end_of_elaboration_phase(phase);
-  axi4_master_drv_bfm_h.axi4_master_drv_proxy_h = this;
+  // axi4_master_drv_bfm_h.axi4_master_drv_proxy_h = this;
 endfunction : end_of_elaboration_phase
 
 //--------------------------------------------------------------------------------------------
@@ -712,5 +709,4 @@ task axi4_master_driver_proxy::axi4_read_task();
   end
 endtask : axi4_read_task
 
-`endif
 

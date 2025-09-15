@@ -1,6 +1,3 @@
-`ifndef AXI4_MASTER_AGENT_BFM_INCLUDED_
-`define AXI4_MASTER_AGENT_BFM_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Module:AXI4 Master Agent BFM
 // This module is used as the configuration class for master agent bfm and its components
@@ -172,4 +169,4 @@ module axi4_master_agent_bfm #(parameter int MASTER_ID = 0)(axi4_if intf);
   end
    
 endmodule : axi4_master_agent_bfm
-`endif
+

@@ -1,6 +1,3 @@
-`ifndef AXI4_SLAVE_MEMORY_INCLUDED_
-`define AXI4_SLAVE_MEMORY_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 // Class: axi4_slave_agent
 // This agent has sequencer, driver_proxy, monitor_proxy for axi4  
@@ -87,5 +84,3 @@ function bit axi4_slave_memory::is_slave_addr_exists(input bit [ADDRESS_WIDTH-1 
   is_slave_addr_exists = slave_memory.exists(slave_address);
 endfunction: is_slave_addr_exists
 
-
-`endif

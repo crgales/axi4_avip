@@ -1,6 +1,3 @@
-`ifndef AXI4_MASTER_MONITOR_PROXY_INCLUDED_
-`define AXI4_MASTER_MONITOR_PROXY_INCLUDED_
-
 //--------------------------------------------------------------------------------------------
 //  Class: axi4_master_monitor_proxy
 //  
@@ -112,7 +109,7 @@ endfunction : connect_phase
 //--------------------------------------------------------------------------------------------
 function void axi4_master_monitor_proxy::end_of_elaboration_phase(uvm_phase phase);
   super.end_of_elaboration_phase(phase);
-  axi4_master_mon_bfm_h.axi4_master_mon_proxy_h = this;
+  // axi4_master_mon_bfm_h.axi4_master_mon_proxy_h = this;
 endfunction : end_of_elaboration_phase
 
 
@@ -270,6 +267,4 @@ task axi4_master_monitor_proxy::axi4_read_data();
     axi4_master_read_data_analysis_port.write(req_rd_clone_packet);
   end
 endtask
-
-`endif
 
